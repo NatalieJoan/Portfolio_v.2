@@ -399,11 +399,11 @@ nav ul li a {
 
 #portfolio {
   position: relative;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 #portfolio .portfolio-list {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 #portfolio .portfolio-list .nav {
@@ -440,12 +440,12 @@ nav ul li a {
 
 #portfolio .portfolio-container {
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   width: 100%;
 }
 
 .portfolio-thumbnail {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   overflow: hidden;
   min-height: 260px;
 }
@@ -453,14 +453,50 @@ nav ul li a {
 .portfolio-thumbnail img {
   max-width: 100%;
   width: 340px;
-  height: 200px;
+  height: 210px;
 }
 
+.overlay{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  -ms-transform: translate(-50%, -50%);
+  width: 320px;
+}
+
+.bg img{
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  justify-content: center;
+}
+
+.bg:hover .image {
+  opacity: 0.3;
+  filter: blur(1px);
+}
+
+.bg:hover .overlay {
+  opacity: 5;
+}
+
+.overlay p{
+  font-size: 14px;
+}
+
+.tech{
+  font-size: 12px;
+  font-weight: 500;
+  color: #CC0FCC;
+}
 /*-----------------------------------------------------------------------------------*/
 /*  Journal
 /*-----------------------------------------------------------------------------------*/
 
-/* #journal,  #journal-blog {
+#journal,  #journal-blog {
   height: auto;
   width: 100%;
   background: #f7f7f7;
@@ -492,7 +528,7 @@ nav ul li a {
   position: relative;
 }
 
-.journal-block .journal-info .journal-txt h4 a {
+.journal-block .journal-info .journal-txt h4 {
   display: block;
   font-size: 19px;
   line-height: 24px;
@@ -506,8 +542,8 @@ nav ul li a {
   transition: all 0.5s ease-in-out 0s;
 }
 
-.journal-block .journal-info .journal-txt h4 a:hover {
-  color: #b87eb0;
+.journal-block .journal-info .journal-txt h4:hover {
+  color: #cb5ebd;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
@@ -519,7 +555,7 @@ nav ul li a {
   margin: 0;
   font-size: 14px;
   line-height: 24px;
-} */
+}
 
 /*-----------------------------------------------------------------------------------*/
 /*  Contact
@@ -527,16 +563,34 @@ nav ul li a {
 #contact {
   height: auto;
   width: 100%;
+  background-color: #292929;
+}
+
+#contact h2{
+  color: #f3e8e8;
+}
+
+.contact-details{
+  color: #afafaf;
+}
+
+.contact-details span:hover{
+  color: #af03af;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
 }
 
 .form-group i{
   font-size: 84px;
-  color: #cc0fcc;
   line-height: 50px;
 }
 
-.form-group a {
-  color: #ffffff;
+.form-group input, .form-group textarea {
+  color: #050505;
+  background-color: #beb3bbfb;
   text-decoration: none !important;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
@@ -545,7 +599,11 @@ nav ul li a {
   transition: all 0.5s ease-in-out 0s;
 }
 
-.form-group a:hover {
+.form-control::placeholder {
+  color: #050505;
+}
+
+.form-group input:hover {
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
@@ -553,9 +611,10 @@ nav ul li a {
   transition: all 0.5s ease-in-out 0s;
 }
 
-.form-group a:hover, .form-group a:focus {
-  color: #CC0FCC;
+.form-group input:hover, .form-group input:focus, .form-group textarea:hover, .form-group textarea:focus {
+  color: #af03af;
   text-decoration: underline;
+  background-color: #ffffff;
 }
 
 .contact-details {
@@ -572,7 +631,23 @@ nav ul li a {
   width: 100%;
 }
 
-#contact  #sendmessage {
+.btn{
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.btn:hover{
+  background-color: #ffffff;
+  color: #af03af;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+#contact  #sent-message {
   color: #184ad2;
   border: 1px solid #184ad2;
   display: none;
@@ -582,7 +657,7 @@ nav ul li a {
   margin: 15px;
 }
 
-#contact  #errormessage {
+/*#contact  #errormessage {
   color: red;
   display: none;
   border: 1px solid red;
@@ -602,7 +677,7 @@ nav ul li a {
   margin: 0 0 20px;
   font-weight: 400;
   font-size: 13px;
-}
+} */
 
 /*-----------------------------------------------------------------------------------*/
 /*  Footer
