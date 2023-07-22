@@ -1,5 +1,7 @@
 ## Portfolio v.2
 
-Theme Name: Natalie Helak's Portfolio
-Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/
-Author: Natalie Helak
+<ul>
+  <li>Theme Name: Natalie Helak's Portfolio</li>
+  <li>Theme URL: https://bootstrapmade.com/folio-bootstrap-portfolio-template/</li>
+  <li>Author: Natalie Helak</li>
+</ul>
